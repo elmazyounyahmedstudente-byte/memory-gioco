@@ -1,17 +1,35 @@
 #include <iostream>
+#include <stdlib.h>
+#include <time.h>
 using namespace std;
-
 int main(int argc, char** argv) {
-	int r,c;
-	int tab[r][c];
-	cout<<"inserisci il numero delle righe: ";
-	cin>>r;
-	cout<<"e delle colonne: ";
-	cin>>c;
-	while(r%2==1 && c%2==1){
-	cout<<"il numero delle righe e delle colonne devono essere pari!"<<endl<<"riprova...";
-	cin>>r;
-	cin>>c;
-}
+	srand(time(0));
+	const int d=rand()%4+4;
+	int matrice[d][d];
+	
+	for(int i=0; i<d;i++){
+		for(int j=0;j<(d+1)/2;j++){
+		matrice[i][j]=rand()%26+65;
+		cout<<" "<<char(matrice[i][j]);
+		int numeri[26];
+		for(int k=0; k<26;k++){
+			int n;
+			n=matrice[i][j]-64;
+			numeri[n]++;
+			if(numeri[n]>2){
+				char o=matrice[i][j]=rand()%26+65;
+			
+		
+			}
+			
+			}
+		
+	cout<<" "<<char(matrice[i][j]);
+		
+	}
+	cout<<endl;
+	}
+	
 	return 0;
 }
+
